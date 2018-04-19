@@ -5,8 +5,8 @@ var fs = require('fs');
 //Configuracion
 var config = {
     endpoint: "https://s3-api.us-geo.objectstorage.softlayer.net/",
-    accessKeyId: "d71b9e42144346bda69a7174984ca12a",
-    secretAccessKey: "d2c6086c5713370065c1678932a22677424aded4d97da3fc",
+    accessKeyId: "cb611f4408b340bd82e3d07248174d7f",
+    secretAccessKey: "0ec52497614e830862654becb6224810d4f8deced0344307",
 };
 var cos = new AWS.S3(config);
 
@@ -25,7 +25,7 @@ function doCreateBucket() {
 
 //Crear Objeto
 function doCreateObject() {
-    console.log('Creando objeto');
+    console.log('Cargando archivo');
     //Cargar archivo
     var fileStream = fs.createReadStream('randompdf.pdf');
     fileStream.on('error', function(err) {
@@ -40,7 +40,7 @@ function doCreateObject() {
 
 //Descargar archivo
 function doGetObject(){
-    console.log('Obteniendo Objeto')
+    console.log('Descargando archivo')
     cos.getObject({
         Bucket: bucket, 
         Key: "randompdf.pdf" }, function(err, data){
@@ -63,7 +63,7 @@ function doGetObject(){
 
 //Borrar archivo
 function doDeleteObject() {
-    console.log('Borrando objeto');
+    console.log('Borrando archivo');
     cos.deleteObject({
         Bucket: bucket,
         Key: 'randompdf.pdf'
