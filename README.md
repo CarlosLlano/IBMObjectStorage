@@ -8,7 +8,7 @@
 ![captura de pantalla 2018-04-19 a la s 2 51 10 p m](https://user-images.githubusercontent.com/17281733/39015007-a2d1c6c4-43e1-11e8-9c0c-9786a36eb363.png)
 
 
-Con estas credenciales se puede acceder usando aws cli o una libreria para un lenguaje de programacion
+Con estas credenciales se puede acceder usando aws cli o una libreria para un lenguaje de programacion.
 A continuación, se muestra ejemplo de cada uno
 
 
