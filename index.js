@@ -23,9 +23,9 @@ function doCreateBucket() {
     }).promise();
 }
 
-//Crear Objeto
+//Subir archivo
 function doCreateObject() {
-    console.log('Cargando archivo');
+    console.log('Subiendo archivo');
     //Cargar archivo
     var fileStream = fs.createReadStream('randompdf.pdf');
     fileStream.on('error', function(err) {
